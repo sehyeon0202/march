@@ -1,0 +1,18 @@
+.headerWrap{
+    width:100%; background:url(../img/bgHeader.png) repeat-x 0px 0px; transition:all 0.5s;
+    #header {
+        width:940px; height:118px;
+        margin:0px auto; position:relative;
+    }
+}
+
+/*tablet*/
+@include rwd(960px){
+    .headerWrap{   
+        margin-top:-37px;   
+        #header {
+            width:100%;           
+        }
+    }
+   
+}

@@ -1,0 +1,22 @@
+
+@mixin button($wid:80px,$ht:30px,$corner:15px,$size:14px,$bgColor:aqua,$fontColor:#fff){
+    display:block; 
+    width:$wid;
+    height:$ht;
+    border-radius:$corner;
+    background:$bgColor;
+    text-align:center;
+    font-weight:bold;
+    font-size:$size;
+    line-height:$ht;
+    font-family:'arial';
+    color:$fontColor;
+}
+
+@mixin rwd($wid){
+    @media screen and (max-width:$wid){
+        @content;
+    }
+}
+
+

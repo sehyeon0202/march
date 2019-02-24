@@ -1,0 +1,18 @@
+.footerWrap {
+    width:100%; background:url(../img/bgFooter.png) repeat-x 0px 0px;
+    #footer {
+        width:940px; height:184px; 
+        margin:0px auto; position:relative;
+    }
+}
+
+/*tablet*/
+@include rwd(960px){
+    
+    .footerWrap {       
+        #footer {
+            width:100%; 
+        }
+    }
+}
+

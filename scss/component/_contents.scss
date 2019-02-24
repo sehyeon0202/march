@@ -1,0 +1,104 @@
+#contents {
+    width:940px; margin:50px auto 80px;   
+    &::after {content:''; display:block; clear:both;}
+    &>div>h2 {
+        font:bold 18px/1 'arial'; color:#444; margin-bottom:25px; padding-top:15px;
+            position:relative;
+            &::before {
+                content:''; display:block; width:60px; height:2px; background:#444;
+                position:absolute; top:0px; left:0px;
+        }
+    }
+    &>div::after {content:''; display:block; clear:both;}
+    .con1 {
+        width:100%; height:380px; margin-bottom:50px;        
+        &>div {
+            width:100%; height:320px; background:#444;
+        }
+    }
+    .con2 {
+        width:100%; margin-bottom:50px;  
+        &>div {
+            width:300px; float:left; margin-right:20px; 
+            &:last-child {margin-right:0px;} 
+            .pic {
+                width:100%; height:160px; background:#444; margin-bottom:20px;
+            }
+            h3 {
+                font:bold 15px/1 'arial'; color:#555; margin-bottom:12px;
+            }
+            p {
+                font:12px/1.2 'arial'; color:#777; letter-spacing:2px; 
+            }
+        }
+    }
+    .con3 {
+        width:460px;  float:left; margin-right:20px;
+        &>div {
+            width:220px; height:115px; background:#444; float:left; margin-right:20px;
+            &:last-child {margin-right:0px;}
+        }       
+    }
+    .con4 {
+        width:460px; float:left; 
+        &>div {
+            width:100%; 
+            ul>li {
+                width:100%;
+                &::after {content:''; display:block; clear:both;}
+                a {
+                    float:left; font:14px/1.7 'arial'; color:#666;
+                }
+                span {
+                    float:right; font:13px/1.7 'arial';
+                    color:#999;
+                }
+            }
+        }
+    }
+}
+
+/*tablet*/
+@include rwd(960px){
+    
+    #contents {
+        width:100%; padding:0px 30px; box-sizing:border-box;
+      
+        .con2 {         
+            &>div {
+                width:32%; margin-right:2%;           
+            }
+        }
+        .con3 {
+            width:49%; margin-right:2%;
+            &>div {
+                width:49%; margin-right:2%;    
+            }       
+        }
+        .con4 {
+            width:49%;           
+        }
+    }
+
+}
+
+/*mobile*/
+@include rwd(540px){  
+    
+    #contents { 
+      
+        .con2 {         
+            &>div {
+                width:100%; margin-right:0%;    
+                margin-bottom:20px;       
+            }
+        }
+        .con3 {
+            width:100%; margin-right:0%;
+            margin-bottom:30px;            
+        }
+        .con4 {
+            width:100%;           
+        }
+    }  
+}
